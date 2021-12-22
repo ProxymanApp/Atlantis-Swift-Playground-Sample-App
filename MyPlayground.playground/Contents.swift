@@ -33,8 +33,35 @@ let task = session.dataTask(with: URLRequest(url: URL(string: httpEndpoint)!)) {
     print(response)
 }
 
+
+// Web Socket
+let wsTask = session.webSocketTask(with: URL(string: "wss://echo.websocket.events")!)
+wsTask.receive { result in
+    switch result {
+    case .success(let message):
+        switch message {
+        case .string(let text):
+            print("[WSS] Received: \(text)")
+        case .data(let data):
+            print("[WSS] Received: Data count = \(data.count)")
+        }
+    case .failure(let error):
+        print(error)
+    }
+}
+DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
+    let content = "Hello from Proxyman and Atlantis"
+    wsTask.send(URLSessionWebSocketTask.Message.string(content)) { error in
+        if let error = error {
+            print(error)
+        }
+    }
+}
+
+
 // Run on Playground mode
 Atlantis.setIsRunningOniOSPlayground(true)
 Atlantis.start()
 
 task.resume()
+wsTask.resume()
