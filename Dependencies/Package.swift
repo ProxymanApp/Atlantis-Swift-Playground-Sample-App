@@ -28,7 +28,7 @@ let package = Package(
 )
 
 package.dependencies = [
-    .package(name: "Atlantis", url: "https://github.com/ProxymanApp/atlantis", revision: "a4a72a06d6a67ba4cf23d12787ea13dca8ecce09")
+    .package(name: "Atlantis", url: "https://github.com/ProxymanApp/atlantis", from: Version(1, 15, 0))
 ]
 package.targets = [
     .target(name: "Dependencies",

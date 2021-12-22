@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/ProxymanApp/atlantis",
         "state": {
           "branch": null,
-          "revision": "a4a72a06d6a67ba4cf23d12787ea13dca8ecce09",
-          "version": null
+          "revision": "5e848072d45e3969bd1d69fab3b6c2151f826c41",
+          "version": "1.15.0"
         }
       }
     ]
