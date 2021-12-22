@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Atlantis",
+        "repositoryURL": "https://github.com/ProxymanApp/atlantis",
+        "state": {
+          "branch": null,
+          "revision": "0f79efcbad23ecb45525ca6e0b8f0721514535f9",
+          "version": "1.14.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
