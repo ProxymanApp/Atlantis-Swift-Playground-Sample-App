@@ -33,6 +33,8 @@ let task = session.dataTask(with: URLRequest(url: URL(string: httpEndpoint)!)) {
     print(response)
 }
 
+// Run on Playground mode
+Atlantis.setIsRunningOniOSPlayground(true)
 Atlantis.start()
 
 task.resume()
